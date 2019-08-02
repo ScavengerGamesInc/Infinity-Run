@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Infinity Run</title>
+    <script type="text/javascript" src="https://la-wit.github.io/build-an-infinite-runner/build/js/lib/p5.js"></script>
+    <script type="text/javascript" src="https://la-wit.github.io/build-an-infinite-runner/build/js/lib/p5.play.js"></script>
+    <script type="text/javascript" src="https://la-wit.github.io/build-an-infinite-runner/build/js/lib/p5.sound.js"></script>
+  </head>
+  <body>
+    <script>
+      var runner;
+      function setup(){
+        createCanvas(840,390);
+        runner = createSprite(50,100,25,40);
+        runner.depth = 4;
+      }
+      function preload(){
+        jumpingAnimation = loadAnimation(
+          'https://la-wit.github.io/build-an-infinite-runner/build/images/sprites/adventureMan/jump00.png',
+          'https://la-wit.github.io/build-an-infinite-runner/build/images/sprites/adventureMan/jump01.png',
+          'https://la-wit.github.io/build-an-infinite-runner/build/images/sprites/adventureMan/jump02.png',
+          'https://la-wit.github.io/build-an-infinite-runner/build/images/sprites/adventureMan/jump03.png',
+          'https://la-wit.github.io/build-an-infinite-runner/build/images/sprites/adventureMan/jump04.png',
+          'https://la-wit.github.io/build-an-infinite-runner/build/images/sprites/adventureMan/jump05.png',
+          'https://la-wit.github.io/build-an-infinite-runner/build/images/sprites/adventureMan/jump06.png',
+          'https://la-wit.github.io/build-an-infinite-runner/build/images/sprites/adventureMan/jump07.png',
+          'https://la-wit.github.io/build-an-infinite-runner/build/images/sprites/adventureMan/jump08.png',
+          'https://la-wit.github.io/build-an-infinite-runner/build/images/sprites/adventureMan/jump09.png'
+        );
+        runningAnimation = loadAnimation(
+          'https://la-wit.github.io/build-an-infinite-runner/build/images/sprites/adventureMan/run01.png',
+          'https://la-wit.github.io/build-an-infinite-runner/build/images/sprites/adventureMan/run02.png',
+          'https://la-wit.github.io/build-an-infinite-runner/build/images/sprites/adventureMan/run03.png',
+          'https://la-wit.github.io/build-an-infinite-runner/build/images/sprites/adventureMan/Run04.png',
+          'https://la-wit.github.io/build-an-infinite-runner/build/images/sprites/adventureMan/run05.png',
+          'https://la-wit.github.io/build-an-infinite-runner/build/images/sprites/adventureMan/run06.png',
+          'https://la-wit.github.io/build-an-infinite-runner/build/images/sprites/adventureMan/run07.png',
+          'https://la-wit.github.io/build-an-infinite-runner/build/images/sprites/adventureMan/run08.png',
+          'https://la-wit.github.io/build-an-infinite-runner/build/images/sprites/adventureMan/run09.png'
+      );
+      }
+      function draw(){
+        background(200);
+        drawSprites();
+      }
+     </script>
+    </body>
+    </html>
